@@ -1,19 +1,31 @@
 # The People-Pleasing Interrupt
 
-Sales page for The People-Pleasing Interrupt — a $27 body-level toolkit by Ari Hale.
+Sales page, checkout, and legal pages for The People-Pleasing Interrupt by Ari Hale.
 
-## What this is
-
-A single-page sales site hosted via GitHub Pages. Checkout is handled through Kit (formerly ConvertKit) commerce integration.
+Live at: https://ariellehale.github.io/people-pleaser-interrupt/
 
 ## Files
 
-- `index.html` — the full sales page (copy, styling, and Kit checkout buttons all in one file)
+- `index.html` — Sales page (Hook/Story/Offer framework, Kit commerce checkout)
+- `thank-you.html` — Post-purchase page (product delivery link, onboarding steps, ascension offers)
+- `disclaimer.html` — General disclaimer (Hale Yeah! Marketing, LLC)
+- `earnings-disclaimer.html` — Earnings disclaimer
+- `cookie-policy.html` — Cookie policy
+- `terms.html` — Terms of service (covers all programs, products, and content)
 
-## Hosting
+## Tracking
 
-This site is published via GitHub Pages at `ariellehale.github.io/people-pleaser-interrupt`.
+- Google Analytics: G-548VKLG1E8 (on all pages)
+- Meta Pixel: 3013518292267783 (on all pages)
 
 ## Checkout
 
-All CTA buttons trigger the Kit commerce overlay via `data-commerce` attribute. The checkout script loads from `haleyeah.kit.com/commerce.js`.
+All CTA buttons trigger the Kit commerce overlay via `data-commerce` attribute. Commerce script loads from `arielle-hale.kit.com/commerce.js`.
+
+## Post-Purchase Flow
+
+Kit redirects buyers to `thank-you.html` after checkout. That page links directly to the Notion product and seeds the Substack and 90-Minute Precision Session.
+
+## Hosting
+
+Published via GitHub Pages. All internal links use the full base URL: `https://ariellehale.github.io/people-pleaser-interrupt/`
