@@ -1,140 +1,84 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HN5ZT3N8LM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HN5ZT3N8LM');
+</script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3013518292267783');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=3013518292267783&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <title>The People-Pleasing Interrupt | Ari Hale</title>
-
-<!--
-  ============================================================
-  KIT CHECKOUT SCRIPT
-  ============================================================
-  This loads Kit's (formerly ConvertKit) payment overlay.
-  When someone clicks any "Get The Interrupt" button on this page,
-  Kit opens a checkout popup instead of sending them to a new page.
-
-  UPDATED 2026-04-03: Changed from haleyeah.kit.com to arielle-hale.kit.com
-  The old username no longer works. This is the correct one.
-
-  IMPORTANT: This script only works when the page is hosted on a
-  live https URL (like GitHub Pages). It will NOT work if you
-  open the HTML file directly on your computer.
-  ============================================================
--->
-<script src="https://arielle-hale.kit.com/commerce.js" async defer></script>
-
-<!--
-  ============================================================
-  FONTS
-  ============================================================
-  Cormorant Garamond = serif font used for headlines and emphasis
-  DM Sans = clean sans-serif font used for body text and buttons
-  These are Ari's brand fonts.
-  ============================================================
--->
+<script src="https://haleyeah.kit.com/commerce.js" async defer></script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
-/*
-  ============================================================
-  COLOR AND FONT VARIABLES
-  ============================================================
-  All colors and fonts are defined here once.
-  To change a color across the whole page, change it here.
-
-  Brand palette:
-  - Dark background (almost black)
-  - Cream/warm white text
-  - Muted red accent (buttons, highlights)
-  - Sky blue (used only for the order bump section)
-  ============================================================
-*/
 :root {
-  --black: #0f0f0f;        /* deepest background */
-  --dark: #1a1a1a;          /* slightly lighter background for alternating sections */
-  --charcoal: #2a2a2a;      /* used for the pricing section background */
-  --text: #d4d0cb;          /* main body text color (warm gray) */
-  --text-muted: #8a8580;    /* secondary text, captions, less important info */
-  --cream: #e8e4de;          /* headlines and emphasized text */
-  --warm-white: #f5f2ed;    /* brightest text (buttons, selected text) */
-  --accent: #c44b4b;        /* muted red, used for buttons and key highlights */
-  --accent-soft: rgba(196, 75, 75, 0.15);  /* faint red glow, used for backgrounds */
-  --sky: #8ab4c7;            /* blue accent, only used on the order bump */
-  --sky-soft: rgba(138, 180, 199, 0.1);    /* faint blue background for order bump */
-  --serif: 'Cormorant Garamond', Georgia, serif;  /* headline font */
-  --sans: 'DM Sans', -apple-system, sans-serif;    /* body font */
+  --black: #0f0f0f;
+  --dark: #1a1a1a;
+  --charcoal: #2a2a2a;
+  --text: #d4d0cb;
+  --text-muted: #8a8580;
+  --cream: #e8e4de;
+  --warm-white: #f5f2ed;
+  --accent: #c44b4b;
+  --accent-soft: rgba(196, 75, 75, 0.15);
+  --sky: #8ab4c7;
+  --sky-soft: rgba(138, 180, 199, 0.1);
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'DM Sans', -apple-system, sans-serif;
 }
-
-/* Reset browser defaults so everything looks the same everywhere */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
-/* Base font size. Everything else scales from this. */
 html { font-size: 18px; scroll-behavior: smooth; }
-
 body {
   background: var(--black);
   color: var(--text);
   font-family: var(--sans);
   line-height: 1.75;
   font-weight: 400;
-  -webkit-font-smoothing: antialiased; /* makes text look sharper on Mac */
+  -webkit-font-smoothing: antialiased;
 }
-
-/* When you highlight text on the page, it shows red background with white text */
 ::selection { background: var(--accent); color: var(--warm-white); }
 
-
-/*
-  ============================================================
-  LAYOUT
-  ============================================================
-  .container = keeps content at a readable width (720px max)
-  .container-wide = slightly wider version (860px)
-  Sections get vertical padding to breathe.
-  On small screens, padding and font size shrink.
-  ============================================================
-*/
+/* --- Layout --- */
 .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
 .container-wide { max-width: 860px; margin: 0 auto; padding: 0 24px; }
 section { padding: 80px 0; }
-
-/* Mobile: less padding, slightly smaller text */
 @media (max-width: 600px) { section { padding: 56px 0; } html { font-size: 16px; } }
 
-
-/*
-  ============================================================
-  TYPOGRAPHY
-  ============================================================
-  Headlines use the serif font (Cormorant Garamond).
-  Body text uses the sans font (DM Sans).
-  Paragraphs have bottom margin for spacing.
-  ============================================================
-*/
+/* --- Typography --- */
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--cream); }
 h1 { font-size: 3.2rem; line-height: 1.15; letter-spacing: -0.02em; }
 h2 { font-size: 2.2rem; line-height: 1.25; letter-spacing: -0.01em; }
 h3 { font-size: 1.4rem; line-height: 1.35; }
 p { margin-bottom: 1.4rem; }
 p:last-child { margin-bottom: 0; }
-
-/* Helper classes for inline styling */
 .small { font-size: 0.85rem; color: var(--text-muted); }
 .serif { font-family: var(--serif); }
 .italic { font-style: italic; }
 .accent { color: var(--accent); }
 .sky { color: var(--sky); }
 
-
-/*
-  ============================================================
-  HERO SECTION (the big top section visitors see first)
-  ============================================================
-  Full viewport height, centered text, subtle gradient glow
-  in the background for atmosphere (not a solid color).
-  ============================================================
-*/
+/* --- Hero --- */
 .hero {
   min-height: 90vh;
   display: flex;
@@ -145,8 +89,6 @@ p:last-child { margin-bottom: 0; }
   position: relative;
   overflow: hidden;
 }
-
-/* Faint red and blue glow behind the hero text. Pure atmosphere. */
 .hero::before {
   content: '';
   position: absolute;
@@ -155,10 +97,7 @@ p:last-child { margin-bottom: 0; }
               radial-gradient(ellipse at 50% 80%, rgba(138, 180, 199, 0.04) 0%, transparent 50%);
   pointer-events: none;
 }
-
 .hero-inner { position: relative; max-width: 700px; }
-
-/* "Ari Hale" label at the top of the hero */
 .hero-label {
   font-family: var(--sans);
   font-size: 0.72rem;
@@ -168,11 +107,8 @@ p:last-child { margin-bottom: 0; }
   color: var(--text-muted);
   margin-bottom: 32px;
 }
-
 .hero h1 { margin-bottom: 32px; }
-.hero h1 span.line { display: block; } /* Forces each line of the headline onto its own row */
-
-/* Italic subheadline under the main headline */
+.hero h1 span.line { display: block; }
 .hero-sub {
   font-family: var(--serif);
   font-size: 1.25rem;
@@ -182,8 +118,6 @@ p:last-child { margin-bottom: 0; }
   max-width: 560px;
   margin: 0 auto 40px;
 }
-
-/* Price line: "Instant access for $27" */
 .hero-price {
   font-family: var(--sans);
   font-size: 1rem;
@@ -196,16 +130,7 @@ p:last-child { margin-bottom: 0; }
   color: var(--accent);
 }
 
-
-/*
-  ============================================================
-  CTA BUTTON (Call To Action)
-  ============================================================
-  The red "Get The Interrupt" button.
-  Used in three places: hero, after the value stack, and at the bottom.
-  All three buttons go to the same Kit checkout link.
-  ============================================================
-*/
+/* --- CTA Button --- */
 .cta-btn {
   display: inline-block;
   font-family: var(--sans);
@@ -222,8 +147,6 @@ p:last-child { margin-bottom: 0; }
   transition: all 0.3s ease;
 }
 .cta-btn:hover { background: #b33f3f; transform: translateY(-1px); }
-
-/* Small text that appears under some buttons ("Immediate download. Works tonight.") */
 .cta-note {
   display: block;
   font-size: 0.75rem;
@@ -231,16 +154,7 @@ p:last-child { margin-bottom: 0; }
   margin-top: 14px;
 }
 
-
-/*
-  ============================================================
-  DIVIDER
-  ============================================================
-  A short red line used to visually separate sections.
-  .divider = centered
-  .divider-left = left-aligned
-  ============================================================
-*/
+/* --- Divider --- */
 .divider {
   width: 40px;
   height: 1px;
@@ -248,23 +162,12 @@ p:last-child { margin-bottom: 0; }
   margin: 0 auto;
   opacity: 0.5;
 }
-.divider-left { margin: 0; }
-
-
-/*
-  ============================================================
-  STORY SECTION (Epiphany Bridge)
-  ============================================================
-  Slightly lighter background so it stands out from the hero.
-  .lead = the first line ("Here's what I know about you.")
-  which is bigger, italic, serif font.
-  ============================================================
-*/
-.story {
-  background: var(--dark);
-  border-top: 1px solid rgba(255,255,255,0.04);
-  border-bottom: 1px solid rgba(255,255,255,0.04);
+.divider-left {
+  margin: 0;
 }
+
+/* --- Story Section --- */
+.story { background: var(--dark); border-top: 1px solid rgba(255,255,255,0.04); border-bottom: 1px solid rgba(255,255,255,0.04); }
 .story p { font-size: 1.05rem; }
 .story .lead {
   font-family: var(--serif);
@@ -275,16 +178,7 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 2rem;
 }
 
-
-/*
-  ============================================================
-  FALSE BELIEF SECTIONS
-  ============================================================
-  Three sections that each address one reason people hesitate to buy.
-  Brunson framework: vehicle belief, internal belief, external belief.
-  .belief-label = small red label at top ("The real problem", etc.)
-  ============================================================
-*/
+/* --- False Belief Sections --- */
 .belief-section { border-bottom: 1px solid rgba(255,255,255,0.04); }
 .belief-label {
   font-family: var(--sans);
@@ -297,16 +191,7 @@ p:last-child { margin-bottom: 0; }
 }
 .belief-section h2 { margin-bottom: 24px; }
 
-
-/*
-  ============================================================
-  STACK SECTION (What's Inside the Toolkit)
-  ============================================================
-  Lists every component of the product, one by one.
-  Each item gets its own block with a title and description.
-  Separated by thin lines.
-  ============================================================
-*/
+/* --- What's Inside (Stack) --- */
 .stack { background: var(--dark); }
 .stack-item {
   padding: 40px 0;
@@ -316,16 +201,7 @@ p:last-child { margin-bottom: 0; }
 .stack-item h3 { color: var(--cream); margin-bottom: 12px; }
 .stack-item p { color: var(--text); font-size: 0.95rem; }
 
-
-/*
-  ============================================================
-  VALUE SECTION (Price Comparison + Reveal)
-  ============================================================
-  Shows each component with a crossed-out "value" price,
-  then reveals the actual $27 price at the bottom.
-  This is the Brunson "stack and close" technique.
-  ============================================================
-*/
+/* --- Value Anchor --- */
 .value-section {
   background: var(--charcoal);
   border-top: 1px solid rgba(255,255,255,0.04);
@@ -350,8 +226,6 @@ p:last-child { margin-bottom: 0; }
 }
 .value-line .label { color: var(--text); }
 .value-line .price { color: var(--text-muted); text-decoration: line-through; }
-
-/* The final row showing the real price ($27) */
 .value-total {
   display: flex;
   justify-content: space-between;
@@ -364,16 +238,7 @@ p:last-child { margin-bottom: 0; }
 .value-total .label { color: var(--cream); }
 .value-total .price { color: var(--accent); font-size: 1.4rem; }
 
-
-/*
-  ============================================================
-  ORDER BUMP (The Freeze-to-Voice Bridge, +$12)
-  ============================================================
-  Blue-tinted box that offers the add-on product.
-  Uses sky blue instead of red to visually differentiate
-  it from the main product.
-  ============================================================
-*/
+/* --- Bump --- */
 .bump {
   background: var(--sky-soft);
   border: 1px solid rgba(138, 180, 199, 0.2);
@@ -399,15 +264,7 @@ p:last-child { margin-bottom: 0; }
   margin-top: 8px;
 }
 
-
-/*
-  ============================================================
-  "WHAT THIS WON'T DO" SECTION
-  ============================================================
-  Honest disclaimer that builds trust and bridges to the
-  $199 Precision Session (the next product in the funnel).
-  ============================================================
-*/
+/* --- Won't Do --- */
 .wont-do {
   background: var(--black);
   border-top: 1px solid rgba(255,255,255,0.04);
@@ -420,15 +277,7 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 1.8rem;
 }
 
-
-/*
-  ============================================================
-  FINAL CTA SECTION
-  ============================================================
-  The last call to action at the bottom of the page.
-  Centered, simple, just the headline + button.
-  ============================================================
-*/
+/* --- Final CTA --- */
 .final-cta {
   background: var(--dark);
   text-align: center;
@@ -438,8 +287,7 @@ p:last-child { margin-bottom: 0; }
 .final-cta h2 { margin-bottom: 20px; }
 .final-cta p { max-width: 520px; margin: 0 auto 32px; color: var(--text-muted); }
 
-
-/* Footer: just the copyright line */
+/* --- Footer --- */
 .footer {
   text-align: center;
   padding: 40px 24px;
@@ -448,20 +296,7 @@ p:last-child { margin-bottom: 0; }
   border-top: 1px solid rgba(255,255,255,0.04);
 }
 
-
-/*
-  ============================================================
-  FAQ SECTION (Accordion)
-  ============================================================
-  Each FAQ is a clickable question that expands to show the answer.
-  Uses a simple open/close toggle (the + rotates to x when open).
-  No JavaScript library needed, just a class toggle.
-
-  There are 10 FAQs. Each one maps to a specific buyer belief
-  from the Propaganda Machine. The question names the objection,
-  the answer breaks it.
-  ============================================================
-*/
+/* --- FAQ Section --- */
 .faq-section {
   background: var(--black);
   border-top: 1px solid rgba(255,255,255,0.04);
@@ -470,8 +305,6 @@ p:last-child { margin-bottom: 0; }
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .faq:last-child { border-bottom: none; }
-
-/* The clickable question row */
 .faq-q {
   width: 100%;
   background: none;
@@ -490,8 +323,6 @@ p:last-child { margin-bottom: 0; }
   transition: color 0.2s ease;
 }
 .faq-q:hover { color: var(--accent); }
-
-/* The + icon that rotates 45 degrees to become an x when open */
 .faq-icon {
   font-family: var(--sans);
   font-size: 1.2rem;
@@ -503,9 +334,6 @@ p:last-child { margin-bottom: 0; }
   margin-top: 4px;
 }
 .faq.open .faq-icon { transform: rotate(45deg); }
-
-/* The answer area. Hidden by default (max-height: 0). */
-/* When the .open class is added, it expands smoothly. */
 .faq-a {
   max-height: 0;
   overflow: hidden;
@@ -523,15 +351,7 @@ p:last-child { margin-bottom: 0; }
   padding-right: 48px;
 }
 
-
-/*
-  ============================================================
-  HERO ANIMATIONS
-  ============================================================
-  Each element in the hero fades up one after another
-  when the page loads. Pure cosmetic, no function.
-  ============================================================
-*/
+/* --- Animations --- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -550,20 +370,9 @@ p:last-child { margin-bottom: 0; }
 </head>
 <body>
 
-<!--
-  ============================================================
-  HERO SECTION
-  ============================================================
-  What it does: First thing visitors see. Big headline, price, and
-  the first "buy" button.
-
-  Why it matters: Brunson says the top of the page needs the hook
-  (headline), the price, and a CTA for people who are already
-  ready to buy. This catches "hot traffic" who don't need convincing.
-
-  BUTTON 1 OF 3 is here.
-  ============================================================
--->
+<!-- ============================== -->
+<!-- HERO: Hook                     -->
+<!-- ============================== -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-label">Ari Hale</div>
@@ -573,26 +382,14 @@ p:last-child { margin-bottom: 0; }
     </h1>
     <p class="hero-sub">Not after. Not in your journal. Not in next week's therapy session. Right now, while your body is mid-override.</p>
     <p class="hero-price">Instant access for <span class="amount">$27</span></p>
-
-    <!-- BUTTON 1 OF 3: Hero CTA -->
-    <a class="cta-btn" href="https://arielle-hale.kit.com/products/the-people-pleasing-interrupt?step=checkout" data-commerce>Get The Interrupt</a>
+    <a class="cta-btn" href="https://haleyeah.kit.com/products/the-people-pleasing-interrupt" data-commerce>Get The Interrupt</a>
   </div>
 </section>
 
 
-<!--
-  ============================================================
-  STORY SECTION (Epiphany Bridge)
-  ============================================================
-  What it does: Tells the reader "I see you" by describing their
-  exact experience with people-pleasing so precisely they feel
-  understood. Then explains WHY nothing has worked (body vs. brain).
-
-  Why it matters: This is Brunson's Epiphany Bridge. Instead of
-  listing credentials, you tell a story that creates the emotional
-  "aha" moment. The reader should think "this person gets it."
-  ============================================================
--->
+<!-- ============================== -->
+<!-- STORY: Epiphany Bridge         -->
+<!-- ============================== -->
 <section class="story">
   <div class="container">
     <p class="lead">Here's what I know about you.</p>
@@ -612,20 +409,10 @@ p:last-child { margin-bottom: 0; }
 </section>
 
 
-<!--
-  ============================================================
-  FALSE BELIEF 1: "This method won't work"
-  ============================================================
-  What it does: Reframes the problem from "you need more information"
-  to "you need something that works at the speed the pattern fires."
-
-  Why it matters: Brunson says every buyer has a false belief about
-  the VEHICLE (the method/opportunity). This section breaks it.
-  The false belief here is: "No tool can work because I've tried
-  everything." The reframe: you haven't tried anything that works
-  at the right speed.
-  ============================================================
--->
+<!-- ============================== -->
+<!-- FALSE BELIEF 1: The Vehicle    -->
+<!-- "This method won't work"       -->
+<!-- ============================== -->
 <section class="belief-section">
   <div class="container">
     <div class="belief-label">The real problem</div>
@@ -642,19 +429,10 @@ p:last-child { margin-bottom: 0; }
 </section>
 
 
-<!--
-  ============================================================
-  FALSE BELIEF 2: "I can't do this / I'm too far gone"
-  ============================================================
-  What it does: Addresses the internal doubt of "maybe this works
-  for other people but my pattern is too deep for a $27 product."
-
-  Why it matters: Brunson's second false belief is about INTERNAL
-  capability. The reader thinks she's the exception. The reframe:
-  the issue isn't depth, it's that everything she's tried enters
-  through the wrong door (thoughts vs. body).
-  ============================================================
--->
+<!-- ============================== -->
+<!-- FALSE BELIEF 2: Internal       -->
+<!-- "I can't do this"              -->
+<!-- ============================== -->
 <section class="belief-section" style="background: var(--dark);">
   <div class="container">
     <div class="belief-label">The thing you're telling yourself</div>
@@ -673,21 +451,10 @@ p:last-child { margin-bottom: 0; }
 </section>
 
 
-<!--
-  ============================================================
-  FALSE BELIEF 3: "My situation is special/different"
-  ============================================================
-  What it does: Addresses the belief that people-pleasing is a
-  personality trait rather than a survival strategy that can be
-  interrupted.
-
-  Why it matters: Brunson's third false belief is about EXTERNAL
-  factors. The reader thinks something outside her control (her
-  wiring, her childhood, her nature) makes her a permanent
-  people-pleaser. The reframe: it's programming, not personality,
-  and the tools inside this product speak the body's language.
-  ============================================================
--->
+<!-- ============================== -->
+<!-- FALSE BELIEF 3: External       -->
+<!-- "My situation is different"    -->
+<!-- ============================== -->
 <section class="belief-section">
   <div class="container">
     <div class="belief-label">The other thing you're telling yourself</div>
@@ -704,19 +471,9 @@ p:last-child { margin-bottom: 0; }
 </section>
 
 
-<!--
-  ============================================================
-  THE STACK: What's Inside the Toolkit
-  ============================================================
-  What it does: Lists every piece of the product one by one
-  so the reader sees exactly what they're getting.
-
-  Why it matters: Brunson says the stack is the "secret weapon."
-  You introduce each piece separately so the perceived value
-  builds up before you reveal the price. The reader should be
-  thinking "all of this?" before they see "$27."
-  ============================================================
--->
+<!-- ============================== -->
+<!-- THE STACK: What's Inside       -->
+<!-- ============================== -->
 <section class="stack">
   <div class="container">
     <div style="text-align: center; margin-bottom: 48px;">
@@ -752,22 +509,9 @@ p:last-child { margin-bottom: 0; }
 </section>
 
 
-<!--
-  ============================================================
-  VALUE ANCHOR + PRICE REVEAL
-  ============================================================
-  What it does: Shows the "retail value" of each component
-  (crossed out) next to the actual $27 price. Makes the deal
-  feel obvious.
-
-  Why it matters: This is Brunson's "If All" close. The stacked
-  value ($225 total) makes $27 feel like a no-brainer.
-  The last thing the reader sees before the button is the gap
-  between what it's "worth" and what it costs.
-
-  BUTTON 2 OF 3 is here.
-  ============================================================
--->
+<!-- ============================== -->
+<!-- VALUE ANCHOR + PRICE REVEAL    -->
+<!-- ============================== -->
 <section class="value-section">
   <div class="container">
     <h2 style="margin-bottom: 12px;">Everything together</h2>
@@ -800,55 +544,14 @@ p:last-child { margin-bottom: 0; }
       </div>
     </div>
 
-    <!-- BUTTON 2 OF 3: After the value stack -->
-    <a class="cta-btn" href="https://arielle-hale.kit.com/products/the-people-pleasing-interrupt?step=checkout" data-commerce>Get The Interrupt</a>
+    <a class="cta-btn" href="https://haleyeah.kit.com/products/the-people-pleasing-interrupt" data-commerce>Get The Interrupt</a>
   </div>
 </section>
 
 
-<!--
-  ============================================================
-  ORDER BUMP (Freeze-to-Voice Bridge)
-  ============================================================
-  What it does: Offers a $12 add-on product for the specific
-  problem of going blank/freezing during conversations.
-
-  Why it matters: Order bumps increase average order value.
-  This one targets a related but different problem so it
-  doesn't make the main product feel incomplete.
-
-  NOTE: Kit doesn't have a native order bump feature. This section
-  is informational on the sales page. The actual upsell happens
-  either as a bundle product on Kit or in the post-purchase email.
-  ============================================================
--->
-<section style="padding: 60px 0;">
-  <div class="container">
-    <div class="bump">
-      <div class="bump-label">Add to your order</div>
-      <h3 class="serif">The Freeze-to-Voice Bridge</h3>
-      <p>For the moment you go completely blank in a conversation. Your mind empties. The words evaporate. You can feel the window closing and you can't get anything out. This is a one-page guide and a 60-second audio you can play in real time that bridges the gap between freeze and speech. It doesn't give you a script for what to say. It gets your voice back online so you can say what's already there.</p>
-      <div class="bump-price">+ $12</div>
-    </div>
-  </div>
-</section>
-
-
-<!--
-  ============================================================
-  "WHAT THIS WON'T DO" (Honest Disclaimer)
-  ============================================================
-  What it does: Tells the reader what the product CAN'T do.
-  Builds trust by underselling.
-
-  Why it matters: Two jobs at once.
-  1. Trust: Being honest about limitations makes everything
-     else on the page more believable.
-  2. Ascension: Plants the seed for the $199 Precision Session
-     without making the $27 product feel incomplete.
-     "If you need more, here's where to go next."
-  ============================================================
--->
+<!-- ============================== -->
+<!-- WHAT THIS WON'T DO             -->
+<!-- ============================== -->
 <section class="wont-do">
   <div class="container">
     <div class="divider divider-left" style="margin-bottom: 32px;"></div>
@@ -856,38 +559,16 @@ p:last-child { margin-bottom: 0; }
 
     <p>It won't clear the root. The fourth layer of your pattern is where the original decision lives, the one your body made when you were too young to make it consciously. Getting to that layer takes precision work with someone who can see the pattern from outside of it and guide you through the charge, not around it.</p>
 
-    <p>This toolkit will interrupt the pattern at the surface and give you data on what's running underneath. That's a meaningful shift on its own. Most women who use it feel the difference within the first week. But if you use it and realize the root is calling for attention, that's what my 90-Minute Precision Sessions are for.</p>
+    <p>This toolkit will interrupt the pattern at the surface and give you data on what's running underneath. That's a meaningful shift on its own. Most women who use it feel the difference within the first week. But if you use it and realize the root is calling for attention, that's what my <a href="https://calendar.app.google/LRicc6RBy1W6g9o5A" target="_blank">90-Minute Precision Sessions</a> are for.</p>
 
     <p>I'm telling you this upfront because I'd rather undersell this and have you surprised than oversell it and have you disappointed. This is $27. It does a specific thing, and it does that thing well.</p>
   </div>
 </section>
 
 
-<!--
-  ============================================================
-  FAQ SECTION
-  ============================================================
-  What it does: 10 questions that address the most common
-  reasons someone would hesitate to buy.
-
-  Why it matters: Each FAQ maps to a specific buyer belief
-  from the Propaganda Machine. The question names the
-  objection in the reader's own language. The answer breaks it.
-  Accordion format so the page stays clean for skimmers.
-
-  FAQ MAP (which belief each one addresses):
-  1. "Understanding should be enough"      -> Method / Destabilize
-  2. "$27 can't touch this"                -> Money / Reframe
-  3. "I'll buy it and never use it"        -> Method / Validate
-  4. "I should fix this alone"             -> Help / Destabilize
-  5. "It's just my personality"            -> The Real Problem / Reframe
-  6. "I know the scripts, can't say them"  -> The Solution / Validate
-  7. "This is repackaged self-help"        -> The Solution / Destabilize
-  8. "Does this replace therapy"           -> Help / Validate
-  9. "My version is different"             -> Why You / Reframe
-  10. "What if I need more"               -> Why Now / Close (ascension bridge)
-  ============================================================
--->
+<!-- ============================== -->
+<!-- FAQs / BUYER BELIEF OBJECTIONS -->
+<!-- ============================== -->
 <section class="faq-section">
   <div class="container">
     <div style="text-align: center; margin-bottom: 56px;">
@@ -895,7 +576,7 @@ p:last-child { margin-bottom: 0; }
       <h2>Before you decide</h2>
     </div>
 
-    <!-- FAQ 1: "Understanding should be enough" -->
+    <!-- BELIEF 1: Understanding should be enough -->
     <div class="faq">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <span>I already understand my people-pleasing pattern. Why would a toolkit help when years of therapy haven't?</span>
@@ -906,7 +587,7 @@ p:last-child { margin-bottom: 0; }
       </div>
     </div>
 
-    <!-- FAQ 2: "$27 can't be real" -->
+    <!-- BELIEF 2: $27 can't touch something this deep -->
     <div class="faq">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <span>Can a $27 product actually do anything meaningful for a pattern this deep?</span>
@@ -917,7 +598,7 @@ p:last-child { margin-bottom: 0; }
       </div>
     </div>
 
-    <!-- FAQ 3: "I'll buy it and never use it" -->
+    <!-- BELIEF 3: I've bought digital products before and they sit in my inbox -->
     <div class="faq">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <span>I've bought things like this before and never used them. What makes this different?</span>
@@ -928,7 +609,7 @@ p:last-child { margin-bottom: 0; }
       </div>
     </div>
 
-    <!-- FAQ 4: "I should be able to fix this myself" -->
+    <!-- BELIEF 4: I should be able to figure this out on my own -->
     <div class="faq">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <span>I feel like I should be able to fix this on my own. I'm smart enough.</span>
@@ -939,7 +620,7 @@ p:last-child { margin-bottom: 0; }
       </div>
     </div>
 
-    <!-- FAQ 5: "It's just who I am" -->
+    <!-- BELIEF 5: My people-pleasing is just who I am -->
     <div class="faq">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <span>What if people-pleasing is just my personality? What if I'm wired this way?</span>
@@ -950,7 +631,7 @@ p:last-child { margin-bottom: 0; }
       </div>
     </div>
 
-    <!-- FAQ 6: "I know the boundary scripts, I just can't say them" -->
+    <!-- BELIEF 6: Another boundary tool/worksheet won't work -->
     <div class="faq">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <span>I've done boundary work before. I know the scripts. The problem is I can't say them out loud when it counts.</span>
@@ -961,7 +642,7 @@ p:last-child { margin-bottom: 0; }
       </div>
     </div>
 
-    <!-- FAQ 7: "This is just repackaged self-help" -->
+    <!-- BELIEF 7: This is just more self-help content -->
     <div class="faq">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <span>How is this not just more self-help content repackaged?</span>
@@ -972,7 +653,7 @@ p:last-child { margin-bottom: 0; }
       </div>
     </div>
 
-    <!-- FAQ 8: "Does this replace my therapist" -->
+    <!-- BELIEF 8: Will this replace therapy -->
     <div class="faq">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <span>Does this replace my therapist?</span>
@@ -983,7 +664,7 @@ p:last-child { margin-bottom: 0; }
       </div>
     </div>
 
-    <!-- FAQ 9: "My version is different/special" -->
+    <!-- BELIEF 9: What if it doesn't work for me specifically -->
     <div class="faq">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <span>What if my version of people-pleasing is different from what this covers?</span>
@@ -994,14 +675,14 @@ p:last-child { margin-bottom: 0; }
       </div>
     </div>
 
-    <!-- FAQ 10: "What if I need more" (ascension bridge to $199 Precision Session) -->
+    <!-- BELIEF 10: What happens after / what's the next step -->
     <div class="faq">
       <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
         <span>What if I use this and realize I need more?</span>
         <span class="faq-icon">+</span>
       </button>
       <div class="faq-a">
-        <p>Good. That means the toolkit did its job. One of the things the Debrief Cards will show you is which layer your pattern keeps running from. If it's consistently layer three or four, that's your signal that the root is asking for attention. That's precision work, and it's what my 90-Minute Precision Sessions are built for. One session, one pattern, traced from the surface thought to the original decision. You don't talk about it for 90 minutes. You go into it, release the charge, and walk out with a different default. The toolkit gets you started. The session finishes what the toolkit surfaced.</p>
+        <p>Good. That means the toolkit did its job. One of the things the Debrief Cards will show you is which layer your pattern keeps running from. If it's consistently layer three or four, that's your signal that the root is asking for attention. That's precision work, and it's what my <a href="https://calendar.app.google/LRicc6RBy1W6g9o5A" target="_blank">90-Minute Precision Sessions</a> are built for. One session, one pattern, traced from the surface thought to the original decision. You don't talk about it for 90 minutes. You go into it, release the charge, and walk out with a different default. The toolkit gets you started. The session finishes what the toolkit surfaced.</p>
       </div>
     </div>
 
@@ -1009,34 +690,21 @@ p:last-child { margin-bottom: 0; }
 </section>
 
 
-<!--
-  ============================================================
-  FINAL CTA
-  ============================================================
-  What it does: The last chance to buy before the page ends.
-
-  Why it matters: Brunson says always end with a CTA.
-  Anyone who read this far is warm. Give them the button.
-
-  BUTTON 3 OF 3 is here.
-  ============================================================
--->
+<!-- ============================== -->
+<!-- FINAL CTA                      -->
+<!-- ============================== -->
 <section class="final-cta">
   <div class="divider" style="margin-bottom: 48px;"></div>
   <h2>Your brain knows the boundary.<br>Your body won't deliver it.</h2>
   <p>This fixes that.</p>
-
-  <!-- BUTTON 3 OF 3: Final CTA -->
-  <a class="cta-btn" href="https://arielle-hale.kit.com/products/the-people-pleasing-interrupt?step=checkout" data-commerce>Get The Interrupt / $27</a>
+  <a class="cta-btn" href="https://haleyeah.kit.com/products/the-people-pleasing-interrupt" data-commerce>Get The Interrupt / $27</a>
   <span class="cta-note">Immediate download. Works tonight.</span>
 </section>
 
 
-<!--
-  ============================================================
-  FOOTER
-  ============================================================
--->
+<!-- ============================== -->
+<!-- FOOTER                         -->
+<!-- ============================== -->
 <footer class="footer">
   <p>&copy; Ari Hale. All rights reserved.</p>
 </footer>
