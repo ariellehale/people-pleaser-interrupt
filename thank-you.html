@@ -3,29 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W3CXNG68');</script>
-<!-- End Google Tag Manager -->
 <title>You're In | The People-Pleasing Interrupt</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --black: #0f0f0f;
   --dark: #1a1a1a;
+  --charcoal: #2a2a2a;
   --text: #d4d0cb;
   --text-muted: #8a8580;
   --cream: #e8e4de;
   --warm-white: #f5f2ed;
   --accent: #c44b4b;
+  --accent-soft: rgba(196, 75, 75, 0.15);
+  --sky: #8ab4c7;
+  --sky-soft: rgba(138, 180, 199, 0.1);
   --serif: 'Cormorant Garamond', Georgia, serif;
   --sans: 'DM Sans', -apple-system, sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { font-size: 18px; }
+html { font-size: 18px; scroll-behavior: smooth; }
 body {
   background: var(--black);
   color: var(--text);
@@ -33,134 +30,135 @@ body {
   line-height: 1.75;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 ::selection { background: var(--accent); color: var(--warm-white); }
 
 .container { max-width: 620px; margin: 0 auto; padding: 0 24px; }
+section { padding: 80px 0; }
+@media (max-width: 600px) { section { padding: 56px 0; } html { font-size: 16px; } }
+
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--cream); }
-h1 { font-size: 2.8rem; line-height: 1.15; letter-spacing: -0.02em; }
-h2 { font-size: 1.6rem; line-height: 1.3; }
+h1 { font-size: 2.8rem; line-height: 1.2; letter-spacing: -0.02em; }
+h2 { font-size: 1.8rem; line-height: 1.3; letter-spacing: -0.01em; }
+h3 { font-size: 1.25rem; line-height: 1.35; }
 p { margin-bottom: 1.4rem; }
 p:last-child { margin-bottom: 0; }
+strong { color: var(--cream); font-weight: 600; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* Hero */
+/* --- Hero --- */
 .hero {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   text-align: center;
-  padding: 100px 24px 60px;
-  position: relative;
+  padding: 100px 24px 80px;
+  background: var(--black);
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(ellipse at 50% 30%, rgba(196, 75, 75, 0.05) 0%, transparent 60%);
-  pointer-events: none;
-}
-.hero-inner { position: relative; max-width: 560px; }
+.hero-inner { max-width: 620px; margin: 0 auto; }
 .hero-label {
   font-family: var(--sans);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 .hero h1 { margin-bottom: 20px; }
 .hero-sub {
-  font-family: var(--serif);
-  font-size: 1.15rem;
-  font-style: italic;
-  color: var(--text-muted);
-  line-height: 1.55;
+  font-size: 1.05rem;
+  color: var(--text);
+  max-width: 520px;
+  margin: 0 auto 12px;
+  line-height: 1.7;
 }
+.hero-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+  font-family: var(--serif);
+  margin-bottom: 36px;
+}
+
+/* --- CTA Button --- */
 .cta-btn {
   display: inline-block;
-  font-family: var(--sans);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--warm-white);
   background: var(--accent);
-  padding: 18px 48px;
+  color: var(--warm-white);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 16px 48px;
   border: none;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease;
-  margin-top: 28px;
 }
-.cta-btn:hover { background: #b33f3f; transform: translateY(-1px); text-decoration: none; }
+.cta-btn:hover { background: #d45555; text-decoration: none; transform: translateY(-1px); }
 
-/* Divider */
+/* --- Divider --- */
 .divider {
-  width: 40px;
-  height: 1px;
+  width: 48px;
+  height: 2px;
   background: var(--accent);
-  margin: 0 auto 40px;
-  opacity: 0.5;
+  margin: 0 auto;
+  opacity: 0.4;
 }
 
-/* Steps section */
+/* --- Steps --- */
 .steps {
-  padding: 0 24px 80px;
+  background: var(--black);
+  padding: 60px 0 80px;
 }
-.step {
-  padding: 28px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+.steps-intro {
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 48px;
+  text-align: center;
 }
-.step:last-child { border-bottom: none; }
-.step-num {
+.step { margin-bottom: 48px; }
+.step:last-child { margin-bottom: 0; }
+.step-label {
   font-family: var(--sans);
-  font-size: 0.7rem;
-  font-weight: 600;
+  font-size: 0.65rem;
+  font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
-.step h2 { margin-bottom: 8px; font-size: 1.3rem; }
-.step p { font-size: 0.95rem; color: var(--text); }
+.step h3 { margin-bottom: 10px; }
+.step p { font-size: 0.9rem; color: var(--text); }
 
-/* Next section */
+/* --- Next Section --- */
 .next {
   background: var(--dark);
-  padding: 60px 24px;
   border-top: 1px solid rgba(255,255,255,0.04);
+  padding: 80px 0;
 }
-.next h2 { text-align: center; margin-bottom: 24px; }
+.next h2 { text-align: center; margin-bottom: 40px; }
 .next-card {
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
-  padding: 28px;
-  margin-bottom: 16px;
+  background: var(--charcoal);
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  border-left: 2px solid rgba(255,255,255,0.06);
 }
 .next-card:last-child { margin-bottom: 0; }
 .next-card-label {
   font-family: var(--sans);
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
-.next-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-}
-.next-card p { font-size: 0.88rem; color: var(--text-muted); }
+.next-card h3 { margin-bottom: 8px; }
+.next-card h3 a { color: var(--accent); }
+.next-card p { font-size: 0.85rem; color: var(--text-muted); }
 
-/* Footer */
+/* --- Footer --- */
 .footer {
   text-align: center;
   padding: 40px 24px;
@@ -168,87 +166,90 @@ a:hover { text-decoration: underline; }
   color: var(--text-muted);
   border-top: 1px solid rgba(255,255,255,0.04);
 }
+.footer a { color: var(--text-muted); }
 
-/* Animations */
+/* --- Animations --- */
 @keyframes fadeUp {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.hero-inner > * {
-  animation: fadeUp 0.7s ease forwards;
-  opacity: 0;
-}
+.hero-inner > * { animation: fadeUp 0.8s ease forwards; opacity: 0; }
 .hero-inner > *:nth-child(1) { animation-delay: 0.1s; }
 .hero-inner > *:nth-child(2) { animation-delay: 0.25s; }
 .hero-inner > *:nth-child(3) { animation-delay: 0.4s; }
-
-@media (max-width: 600px) {
-  html { font-size: 16px; }
-  .hero { padding: 80px 24px 48px; }
-}
+.hero-inner > *:nth-child(4) { animation-delay: 0.55s; }
+.hero-inner > *:nth-child(5) { animation-delay: 0.7s; }
 </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3CXNG68"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
+<!-- ============================== -->
+<!-- HERO                           -->
+<!-- ============================== -->
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-label">You're in</div>
-    <h1>Your toolkit is ready.</h1>
-    <p class="hero-sub">Click below to access everything right now. You'll also get a copy in your email.</p>
-    <a class="cta-btn" href="https://www.notion.so/The-People-Pleasing-Interrupt-331e4fd8791b817b9492d97e2f8d1328" target="_blank">Open Your Toolkit</a>
+    <h1>The next time your body starts to override you, you won't be empty-handed.</h1>
+    <p class="hero-note">Click below to access everything right now. You'll also get a copy in your email.</p>
+    <a href="https://arielle-hale.kit.com/products/the-people-pleasing-interrupt" class="cta-btn">Open Your Toolkit</a>
   </div>
 </section>
 
+<div class="divider"></div>
+
+<!-- ============================== -->
+<!-- STEPS                          -->
+<!-- ============================== -->
 <section class="steps">
   <div class="container">
-    <div class="divider"></div>
+    <p class="steps-intro">This works at the body level, not the thought level. That's why the order matters.</p>
 
     <div class="step">
-      <div class="step-num">Start here</div>
-      <h2>Open the Pattern Trace first.</h2>
-      <p>Don't skip ahead to the audio scripts. The Pattern Trace maps your specific version of the pattern across all four layers. Everything else in the toolkit works better once you know which layer is running the show.</p>
+      <div class="step-label">Start here</div>
+      <h3>Open the Pattern Trace first.</h3>
+      <p>Don't skip ahead to the audios. The Pattern Trace maps your specific version of the pattern across all four layers. Everything else in the toolkit works better once you know which layer is running the show.</p>
     </div>
 
     <div class="step">
-      <div class="step-num">Then</div>
-      <h2>Save the audio scripts to your phone.</h2>
-      <p>They're designed to be played in real time, in the car, in the bathroom, wherever you are when the pattern fires. Don't wait for a perfect moment to use them. The next time you feel yourself about to say yes when you don't want to, that's the moment.</p>
+      <div class="step-label">Then</div>
+      <h3>Save the audios to your phone right now.</h3>
+      <p>Not later. You'll need them in the next day or two and you won't want to be digging through email when the moment hits. They're designed to be played in real time, in the car, in the bathroom, wherever you are when the pattern fires. The next time you feel yourself about to say yes when you don't want to, that's the moment.</p>
     </div>
 
     <div class="step">
-      <div class="step-num">Keep going</div>
-      <h2>Fill out a Debrief Card after every people-pleasing moment.</h2>
-      <p>Two minutes per card. The pattern you'll see across multiple cards is the thing that changes how you understand yourself. Don't judge what you write. Just capture it while it's still hot.</p>
+      <div class="step-label">Keep going</div>
+      <h3>Fill out a Debrief Card after every people-pleasing moment.</h3>
+      <p>The pattern you'll see across multiple cards is the thing that changes how you understand yourself. Don't judge what you write. Just capture it while it's still hot.</p>
     </div>
-
   </div>
 </section>
 
+<!-- ============================== -->
+<!-- NEXT                           -->
+<!-- ============================== -->
 <section class="next">
   <div class="container">
-    <h2>When you're ready for more</h2>
+    <h2>When you start seeing the pattern clearly</h2>
 
     <div class="next-card">
       <div class="next-card-label">Free</div>
-      <h3><a href="https://arihale.substack.com" target="_blank">After the Healing</a></h3>
+      <h3><a href="https://afterthehealing.substack.com?utm_source=ppi&utm_medium=thank_you_page&utm_content=people_pleasing_interrupt_thank_you">After the Healing</a></h3>
       <p>My Substack. Weekly essays on what happens after you've done the work and the pattern is still there. The free tier gets the essay. The paid tier gets a weekly body-level exercise.</p>
     </div>
 
     <div class="next-card">
       <div class="next-card-label">Go deeper</div>
-      <h3><a href="https://calendar.app.google/LRicc6RBy1W6g9o5A" target="_blank">90-Minute Precision Session</a></h3>
+      <h3><a href="https://calendar.app.google/4nFZYTAXZanAuPCG6?utm_source=ppi&utm_medium=thank_you_page&utm_content=people_pleasing_interrupt_thank_you">90-Minute Precision Session</a></h3>
       <p>If the Debrief Cards keep pointing to layer three or four, that's your signal. One session, one pattern, traced from the surface to the root. You don't talk about it for 90 minutes. You go into it, release the charge, and walk out with a different default. $199.</p>
     </div>
-
   </div>
 </section>
 
+<!-- ============================== -->
+<!-- FOOTER                         -->
+<!-- ============================== -->
 <footer class="footer">
-  <p><p>&copy; Ari Hale. All rights reserved. <a href="https://ariellehale.github.io/people-pleaser-interrupt/disclaimer.html" target="_blank" style="color: #8a8580;">Disclaimer</a> · <a href="https://ariellehale.github.io/people-pleaser-interrupt/earnings-disclaimer.html" target="_blank" style="color: #8a8580;">Earnings Disclaimer</a></p>copy; Ari Hale. All rights reserved. <a href="https://ariellehale.github.io/people-pleaser-interrupt/disclaimer.html" target="_blank" style="color: #8a8580;">Disclaimer</a> · <a href="https://ariellehale.github.io/people-pleaser-interrupt/earnings-disclaimer.html" target="_blank" style="color: #8a8580;">Earnings Disclaimer</a> · <a href="https://ariellehale.github.io/people-pleaser-interrupt/cookie-policy.html" target="_blank" style="color: #8a8580;">Cookie Policy</a> · <a href="https://ariellehale.github.io/people-pleaser-interrupt/terms.html" target="_blank" style="color: #8a8580;">Terms of Service</a></p>
+  <p>&copy; Ari Hale. All rights reserved. <a href="https://ariellehale.github.io/people-pleaser-interrupt/disclaimer.html">Disclaimer</a> &middot; <a href="https://ariellehale.github.io/people-pleaser-interrupt/earnings-disclaimer.html">Earnings Disclaimer</a> &middot; <a href="https://ariellehale.github.io/people-pleaser-interrupt/cookie-policy.html">Cookie Policy</a> &middot; <a href="https://ariellehale.github.io/people-pleaser-interrupt/terms.html">Terms of Service</a></p>
 </footer>
 
 </body>
